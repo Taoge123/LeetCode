@@ -25,7 +25,6 @@ def printLevelOrder(root):
             queue.append(node.right)
 
 
-
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
