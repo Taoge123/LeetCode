@@ -29,7 +29,7 @@ def preOrder(node):
     print(node.data)
     preOrder(node.left)
     preOrder(node.right) 
- 
+
  
 arr = [1, 2, 3, 4, 5, 6, 7]
 root = sortedArrayToBST(arr)
