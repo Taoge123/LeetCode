@@ -1,0 +1,50 @@
+def knapSack(W, wt, val, n):
+
+    #Base case
+    if n == 0 or W == 0:
+        return 0
+
+    #If weight of the nth item is more than knapsack capacity W
+    #THen item cannt be included
+    if (wt[n-1] > W):
+        return knapSack(W, wt, val, n-1)
+
+    #return the max of weather item is included
+    else:
+        return max(val[n-1] + knapSack(W-wt[n-1], wt, val, n-1),
+            knapSack(W, wt, val, n-1))
+
+val = [60, 100, 120]
+wt = [10, 20, 30]
+W = 50
+n = len(val)
+print(knapSack(W , wt , val , n))
+
+
+'-----------------'
+
+def knapSack(W, wt, val, n):
+    K = [[0 for x in range(W+1)] for x in range(n+1)]
+
+    #Bottom up
+    for i in range(n+1):
+        for w in range(W+1):
+
+            if i == 0 or w == 0:
+                K[i][w] = 0
+
+            elif wt[i-1] <= w:
+                K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]], K[i-1][w])
+
+            else:
+                K[i][w] = K[i-1][w]
+
+    return K[n][W]
+
+val = [60, 100, 120]
+wt = [10, 20, 30]
+W = 50
+n = len(val)
+print(knapSack(W, wt, val, n))
+
+
