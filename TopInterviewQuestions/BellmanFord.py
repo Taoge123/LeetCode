@@ -33,6 +33,7 @@ class Graph:
             if dist[u] != float("inf") and dist[u] + w < dist[v]:
                 print("Graph contains negative weight cycle")
                 return
+            print("no cycles")
 
         self.printArr(dist)
 
