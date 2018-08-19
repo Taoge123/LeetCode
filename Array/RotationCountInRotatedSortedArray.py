@@ -44,3 +44,4 @@ def countRotations2(arr, low, high):
 arr = [15, 18, 2, 3, 6, 12]
 n = len(arr)
 print(countRotations2(arr, 0, n-1))
+
