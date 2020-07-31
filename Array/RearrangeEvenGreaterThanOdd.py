@@ -24,7 +24,7 @@ def rearrange(a, n):
         print(ans[i], end=" ")
 
 
-A = [ 1, 3, 2, 2, 5 ]
+A = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
 n = len(A)
 rearrange(A, n)
 

@@ -21,7 +21,7 @@ class Graph:
         dist = [float("inf")] * self.V
         dist[src] = 0
 
-        #2. Relax all edges. A simple shortest path from src to any other vetex can have at most
+        #2. Relax all edges. A simple shortest path from src to any other vertex can have at most
         for i in range(self.V - 1):
 
             for u, v, w in self.graph:
